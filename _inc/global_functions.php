@@ -44,6 +44,9 @@ function do_logout(){
 	if ( !is_logged_in() ){
 		return true;
 	}
+
+	make_log("Log out");
+
 	global $auth;
 	global $auth_config;
 
@@ -210,4 +213,27 @@ function get_warehouses_product_state($product_id){
 	$products =$database->select('warehouse_products','*',['product_id'=>$product['id']]);
 
 	return $products ? $products : false;
+}
+
+/**
+ * Create a log
+ *
+ * @param $text
+ *
+ * @return bool
+ */
+function make_log($text){
+	$user = get_user();
+	$user_profile = get_user_profile($user->id);
+	$company_id = $user_profile['company_id'];
+
+	global $database;
+
+	$log = $database->insert('logs',[
+		'company_id' =>$user_profile['company_id'],
+		'user_id'=>$user_profile['id'],
+		'user_name'=>$user_profile['name'].' '.$user_profile['surname'],
+		'log' => $text
+	]);
+	return $log ? true : false;
 }
