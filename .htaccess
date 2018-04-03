@@ -1,0 +1,7 @@
+RewriteEngine On
+#RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

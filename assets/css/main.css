@@ -1,0 +1,100 @@
+/* general */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* clearfix */
+.group:before, .container:before,
+.group:after, .container:after {
+	content: " ";
+	display: table;
+}
+
+.group:after, .container:after {
+	clear: both;
+}
+
+body {
+	color: #333;
+	font-size: 100%;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.menu {
+	text-align: center;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.menu li {
+	display: inline-block;
+}
+
+.controls a {
+	/*font-size: 13px;*/
+}
+
+/*  MY CSS:  */
+.pull-right {
+	float: right;
+}
+main {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+body.company_register h1,
+body.index h1{
+	text-align: center;
+}
+.box{
+	margin-top: 60px;
+	margin-bottom: 40px;
+	margin-left: 50%;
+	margin-right: 50%;
+	transform: translateX(-50%);
+	padding: 40px;
+	border: 3px solid #008bba;
+	/*-webkit-box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.68);*/
+	/*-moz-box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.68);*/
+	/*box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.68);*/
+}
+
+.card:hover {
+	outline: 3px solid #008bba;
+}
+.card h3 i {
+	float: right;
+	margin-top:5px;
+}
+a:hover .card h3 i {
+	display: block;
+}
+a:hover .card .card-header h3,
+a:hover .card .card-body h4,
+a:hover .card .card-body p{
+	text-decoration: none;
+	display: inline-block;
+}
+table i {
+	font-size: 16px;
+	margin: 3px;
+}
