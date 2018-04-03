@@ -60,7 +60,7 @@
 	<div class="col-sm-12">
 		<a href="/user/product_edit?id=0" class="btn btn-success">CREATE PRODUCT</a>
 		<?php if($products){?>
-			<a href="/_inc/user/products_all_xls.php" class="btn btn-info">EXPPORT XLS</a>
+			<a href="/_inc/user/products_all_xls.php" class="btn btn-info">EXPORT XLS</a>
 		<?php } ?>
 	</div>
 </div>

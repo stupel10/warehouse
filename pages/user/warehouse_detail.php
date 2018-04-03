@@ -72,6 +72,9 @@
 		<div class="col-sm-12">
 			<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">ADD PRODUCT</a>
 			<a href="/user/warehouse_edit?id=<?= $warehouse['id'] ?>" class="btn btn-info">EDIT WAREHOUSE</a>
+			<?php if($warehouse_products){?>
+				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-info">EXPORT XLS</a>
+			<?php } ?>
 			<a href="javascript:void(0)" onclick="deleteWarehouse(<?=$warehouse['id']?>);" class="btn btn-danger">DELETE WAREHOUSE</a>
 		</div>
 	</div>
