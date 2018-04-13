@@ -33,9 +33,16 @@
 						<td><img src="<? if(isset($product['photo_link'])){ echo $product['photo_link']; }else{ echo '/assets/images/product_default.png'; }?>" alt="" style="height: 30px;width:auto;"></td>
 						<td><?=$product['name']?></td>
 						<td>
-							<a href="/user/product_detail?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Info"><i class="fas fa-info"></i></a>
-							<a href="/user/product_edit?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
-							<a href="javascript:void(0);" onclick="deleteProduct(<?=$product['id']?>);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit"><i class="fas fa-times"></i></a>
+							<?php
+							if( have_permission($user_profile['id'],6) ){?>
+								<a href="/user/product_detail?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Info"><i class="fas fa-info"></i></a>
+							<?php }
+							if( have_permission($user_profile['id'],7) ){?>
+								<a href="/user/product_edit?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
+							<?php }
+							if( have_permission($user_profile['id'],8) ){?>
+								<a href="javascript:void(0);" onclick="deleteProduct(<?=$product['id']?>);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit"><i class="fas fa-times"></i></a>
+							<?php }?>
 						</td>
 						<td><?php
 							$WH_states = get_warehouses_product_state($product['id']);
@@ -58,7 +65,10 @@
 <?php } ?>
 <div class="row">
 	<div class="col-sm-12">
-		<a href="/user/product_edit?id=0" class="btn btn-success">CREATE PRODUCT</a>
+		<?php
+		if( have_permission($user_profile['id'],5) ){?>
+			<a href="/user/product_edit?id=0" class="btn btn-success">CREATE PRODUCT</a>
+		<?php } ?>
 		<?php if($products){?>
 			<a href="/_inc/user/products_all_xls.php" class="btn btn-info">EXPORT XLS</a>
 		<?php } ?>

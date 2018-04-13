@@ -219,14 +219,19 @@ class Auth
 
 			return $return;
 		}
-
+		// end create profile
 
         $addUser = $this->addUser($email, $password, $params, $sendmail, $profile_id);
 
 		if ($addUser['error'] != 0) {
 			$return['message'] = $addUser['message'];
+			// TODO: delete user_profile if user was not created
 			return $return;
 		}
+
+		// adding permissions
+		if($createCompany) set_permissions($profile_id,'admin');
+		// end permissions
 
 		$return['error'] = false;
 		$return['message'] = ($sendmail == true ? $this->lang["register_success"] : $this->lang['register_success_emailmessage_suppressed'] );
@@ -625,6 +630,7 @@ class Auth
 		}
 
 		$return['error'] = false;
+		$return['uid'] = $uid;
 		return $return;
 	}
 

@@ -4,7 +4,6 @@
         "filp/whoops" : "2.1.14",
         "phpauth/phpauth": "^1.1",
         "tamtamchik/simple-flash": "^1.2",
-        "setasign/fpdf": "^1.8",
         "phpoffice/phpspreadsheet": "^1.2"
     }
 }

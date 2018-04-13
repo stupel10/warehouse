@@ -1,5 +1,11 @@
 <?php
 
+	if( !have_permission($user_profile['id'],10) ){
+		flash()->error('Zakázané');
+		die();
+	}
+
+
 	if ( !isset($_GET['id']) || empty($_GET['id']) ){
 		//flash()->error('Missing parameter id.');
 		//redirect('/user/homepage');
@@ -70,12 +76,19 @@
 	<?php } ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">ADD PRODUCT</a>
-			<a href="/user/warehouse_edit?id=<?= $warehouse['id'] ?>" class="btn btn-info">EDIT WAREHOUSE</a>
-			<?php if($warehouse_products){?>
+			<?php
+			if( have_permission($user_profile['id'],5) ){?>
+				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">ADD PRODUCT</a>
+			<?php }
+			if( have_permission($user_profile['id'],11) ){?>
+				<a href="/user/warehouse_edit?id=<?= $warehouse['id'] ?>" class="btn btn-info">EDIT WAREHOUSE</a>
+			<?php }
+			if($warehouse_products){?>
 				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-info">EXPORT XLS</a>
+			<?php }
+			if( have_permission($user_profile['id'],12) ){?>
+				<a href="javascript:void(0)" onclick="deleteWarehouse(<?=$warehouse['id']?>);" class="btn btn-danger">DELETE WAREHOUSE</a>
 			<?php } ?>
-			<a href="javascript:void(0)" onclick="deleteWarehouse(<?=$warehouse['id']?>);" class="btn btn-danger">DELETE WAREHOUSE</a>
 		</div>
 	</div>
 <?php }?>

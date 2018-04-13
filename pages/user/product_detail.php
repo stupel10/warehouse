@@ -1,5 +1,8 @@
 <?php
-
+if( !have_permission($user_profile['id'],6) ){
+	flash()->error('Zakázané');
+	die();
+}
 if ( !isset($_GET['id']) || empty($_GET['id']) ){
 	//flash()->error('Missing parameter id.');
 	//redirect('/user/homepage');

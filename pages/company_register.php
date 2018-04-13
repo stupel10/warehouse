@@ -1,3 +1,13 @@
+<?php
+//
+//	// zatial nechceme spristupnit verejnu registraciu firiem
+//	include_once '403.php';
+//	exit();
+//
+//	die('restricted yet! :)');
+//
+//?>
+
 <div class="page-header">
 	<h1>WAREHOUSE SYSTEM</h1>
 </div>

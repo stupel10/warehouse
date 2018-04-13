@@ -1,9 +1,17 @@
 <?php
 $redirect_page = '/user/homepage';
+require_once '../config.php';
+
+if( !have_permission($user_profile['id'],11) ){
+	flash()->error('Zakázané');
+	die();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-	require_once '../config.php';
+
+
+
 
 	$user         = get_user();
 	$user_profile = get_user_profile( $user->id );
@@ -21,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$company_id = $_POST['company_id'];
 	$id = $_POST['id'];
 
-	if($id!=0 && $user_profile['company_id'] != $id){
+	if($id!=0 && $user_profile['company_id'] != $company_id){
 		flash()->error('Editing foreign warehouse restricted.');
 		redirect($redirect_page);
 	}

@@ -2,6 +2,13 @@
 $redirect_page = '/user/homepage';
 require_once '../config.php';
 
+
+if( !have_permission($user_profile['id'],7) ){
+	flash()->error('Zakázané');
+	die();
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 

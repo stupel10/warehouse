@@ -45,18 +45,9 @@ if ( is_logged_in() ) {
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item<?php if($page=='homepage') echo ' active'?>"><a href="/user/homepage" class="btn nav-link">COMPANY HOME</a></li>
 				<li class="nav-item<?php if($page=='products_all') echo ' active'?>"><a href="/user/products_all" class="btn nav-link">ALL PRODUCTS</a></li>
-				<!--<li class="nav-item dropdown">-->
-					<!--<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download" aria-expanded="true">Yeti <span class="caret"></span></a>-->
-					<!--<div class="dropdown-menu show" aria-labelledby="download">-->
-					<!--	<a class="dropdown-item" href="https://jsfiddle.net/bootswatch/vdr1vx77/">Open in JSFiddle</a>-->
-					<!--	<div class="dropdown-divider"></div>-->
-					<!--	<a class="dropdown-item" href="../4/yeti/bootstrap.min.css">bootstrap.min.css</a>-->
-					<!--	<a class="dropdown-item" href="../4/yeti/bootstrap.css">bootstrap.css</a>-->
-					<!--	<div class="dropdown-divider"></div>-->
-					<!--	<a class="dropdown-item" href="../4/yeti/_variables.scss">_variables.scss</a>-->
-					<!--	<a class="dropdown-item" href="../4/yeti/_bootswatch.scss">_bootswatch.scss</a>-->
-					<!--</div>-->
-				<!--</li>-->
+				<?php if( have_permission($user_profile['id'],4) ){?>
+					<li class="nav-item<?php if($page=='users_all') echo ' active'?>"><a href="/user/users_all" class="btn nav-link">USERS</a></li>
+				<?php }?>
 			</ul>
 			<div class="my-2 my-lg-0">
 				<a href="/_inc/user/logout.php" class="btn btn-danger">LOG OUT</a>

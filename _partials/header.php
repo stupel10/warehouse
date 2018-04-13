@@ -41,6 +41,9 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item<?php if($page=='homepage') echo ' active'?>"><a href="/user/homepage" class="btn nav-link">COMPANY HOME</a></li>
 					<li class="nav-item<?php if($page=='products_all') echo ' active'?>"><a href="/user/products_all" class="btn nav-link">ALL PRODUCTS</a></li>
+					<?php if( have_permission($user_profile['id'],4) ){?>
+						<li class="nav-item<?php if($page=='users_all') echo ' active'?>"><a href="/user/users_all" class="btn nav-link">USERS</a></li>
+					<?php } ?>
 				</ul>
 				<div class="my-2 my-lg-0">
 					<a href="/_inc/user/logout.php" class="btn btn-danger">LOG OUT</a>
@@ -55,7 +58,7 @@
 					<?php if($pages_dir=='company_register'){ ?>
 						<a href="/" class="btn btn-success">LOG IN</a>
 					<?php }else{?>
-						<a href="/company_register" class="btn btn-success">REGISTER COMPANY</a>
+						<!--<a href="/company_register" class="btn btn-success">REGISTER COMPANY</a>-->
 					<?php }?>
 				</div>
 			</div>

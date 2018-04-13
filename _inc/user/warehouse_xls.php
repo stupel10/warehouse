@@ -10,10 +10,11 @@ if ( !isset($_GET['id']) || empty($_GET['id']) ){
 	redirect('/user/homepage');
 }else{
 	$warehouse_id = $_GET['id'];
+	$warehouse = get_warehouse($warehouse_id);
 	$warehouse_products = get_warehouse_products($warehouse_id);
 }
 
-if (!$warehouse_products){
+if (!$warehouse_products || !$warehouse){
 	redirect('/user/homepage');
 }
 
@@ -24,15 +25,18 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
 
-$sheet->setCellValue('A1', 'Product ID');
-$sheet->setCellValue('B1', 'Product name');
-$sheet->setCellValue('C1', 'Product quantity');
-$sheet->setCellValue('D1', 'Unit price');
-$sheet->setCellValue('E1', 'Unit weight');
-$sheet->setCellValue('F1', 'About');
-$sheet->setCellValue('G1', 'Photo link');
+$sheet->setCellValue('A1',"Sklad:");
+$sheet->setCellValue('A2',$warehouse['name']);
 
-$i = 2;
+$sheet->setCellValue('A4', 'ID produktu');
+$sheet->setCellValue('B4', 'Meno produktu');
+$sheet->setCellValue('C4', 'Počet');
+$sheet->setCellValue('D4', 'Cena za jednotku');
+$sheet->setCellValue('E4', 'Jednotková váha');
+$sheet->setCellValue('F4', 'Vlastnosti');
+$sheet->setCellValue('G4', 'Link na obrázok');
+
+$i = 5;
 foreach ($warehouse_products as $warehouse_product){
 	$product = get_product($warehouse_product['product_id']);
 

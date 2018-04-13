@@ -12,13 +12,13 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
 
-$sheet->setCellValue('A1', 'Product ID');
-$sheet->setCellValue('B1', 'Product name');
-$sheet->setCellValue('C1', 'Product quantity');
-$sheet->setCellValue('D1', 'Unit price');
-$sheet->setCellValue('E1', 'Unit weight');
-$sheet->setCellValue('F1', 'About');
-$sheet->setCellValue('G1', 'Photo link');
+$sheet->setCellValue('A1', 'ID produktu');
+$sheet->setCellValue('B1', 'Meno produktu');
+$sheet->setCellValue('C1', 'Počet');
+$sheet->setCellValue('D1', 'Cena za jednotku');
+$sheet->setCellValue('E1', 'Jednotková váha');
+$sheet->setCellValue('F1', 'Vlastnosti');
+$sheet->setCellValue('G1', 'Link na obrázok');
 
 $i = 2;
 foreach ($products as $product){

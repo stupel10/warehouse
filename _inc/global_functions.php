@@ -237,3 +237,115 @@ function make_log($text){
 	]);
 	return $log ? true : false;
 }
+
+/**
+ *
+ * Get all users of company by company ID
+ *
+ * @param $company_id
+ *
+ * @return array|bool
+ */
+function get_all_users_by_company($company_id){
+	$user = get_user();
+	$user_profile = get_user_profile($user->id);
+
+	if( $company_id !=  $user_profile['company_id'] ){
+		flash()->error('zakazane!');
+		return false;
+	}
+
+	global $database;
+	$users = $database->select('user_profiles','*',['company_id' => $company_id]);
+
+	return $users? $users : false;
+
+}
+
+/**
+ *
+ * Set permissions to user by role
+ *
+ * @param $user_profile_id
+ * @param $role
+ *
+ * @return bool
+ */
+function set_permissions($user_profile_id,$role){
+	global $database;
+	$assigned_permissions = [];
+	switch ($role){
+		case 'admin':
+			$assigned_permissions = ['create_user','edit_user','view_user','delete_user','create_product','edit_product','view_product','delete_product','move_product','create_warehouse','edit_warehouse','view_warehouse','delete_warehouse'];
+			break;
+		case 'administrative':
+			$assigned_permissions = ['create_product','edit_product','view_product','delete_product','move_product','create_warehouse','edit_warehouse','view_warehouse','delete_warehouse'];
+			break;
+		case 'warehouseman':
+			$assigned_permissions = ['create_product','edit_product','view_product','delete_product','move_product','view_warehouse'];
+			break;
+		case 'accountant':
+			$assigned_permissions = ['view_product','view_warehouse'];
+			break;
+		default:
+			flash()->error("Neboli vytvorené práva pre uživateľa.");
+			return false;
+	}
+
+	$all_permissions = get_all_permissions();
+	for ( $i = 0; $i < count($all_permissions); $i++ )
+	{
+		if(in_array($all_permissions[$i]['name'],$assigned_permissions)){
+			$value = 1;
+		}else{ $value = 0; }
+		$database->insert('users_permissions',[
+			'user_profile_id' => $user_profile_id,
+			'permission_id' => $all_permissions[$i]['id'],
+			'value' => $value
+		]);
+	}
+	flash()->info("role: ".$role);
+	return true;
+}
+
+/**
+ *
+ * Detect if user have permission in area
+ *
+ * @param $user_profile_id
+ * @param $permission_id
+ *
+ * @return array|bool|mixed
+ */
+function have_permission($user_profile_id,$permission_id){
+	global $database;
+
+	$permission = $database->get('users_permissions',['value'],[
+		'user_profile_id' => $user_profile_id,
+		'permission_id' => $permission_id
+	]);
+	return $permission['value'];
+}
+
+
+/**
+ *
+ * Get all permissions
+ *
+ * @return array|bool
+ */
+function get_all_permissions(){
+	global $database;
+
+	$permissions = $database->select('user_permissions','*');
+
+	return $permissions ? $permissions : false;
+}
+
+function get_all_user_permissions($user_profile_id){
+	global  $database;
+
+	$permissions = $database->select('users_permissions','*',['user_profile_id'=>$user_profile_id]);
+
+	return $permissions ? $permissions : false;
+}
