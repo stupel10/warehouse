@@ -16,7 +16,7 @@ if ( is_logged_in() ) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>WAREHOUSE</title>
+	<title>Sklad</title>
 
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<!--<link rel="stylesheet" href="/assets/css/bootstrap-grid.css">-->
@@ -43,14 +43,14 @@ if ( is_logged_in() ) {
 		</button>
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item<?php if($page=='homepage') echo ' active'?>"><a href="/user/homepage" class="btn nav-link">COMPANY HOME</a></li>
-				<li class="nav-item<?php if($page=='products_all') echo ' active'?>"><a href="/user/products_all" class="btn nav-link">ALL PRODUCTS</a></li>
+				<li class="nav-item<?php if($page=='homepage') echo ' active'?>"><a href="/user/homepage" class="btn nav-link">Domov</a></li>
+				<li class="nav-item<?php if($page=='products_all') echo ' active'?>"><a href="/user/products_all" class="btn nav-link">Produkty</a></li>
 				<?php if( have_permission($user_profile['id'],4) ){?>
-					<li class="nav-item<?php if($page=='users_all') echo ' active'?>"><a href="/user/users_all" class="btn nav-link">USERS</a></li>
+					<li class="nav-item<?php if($page=='users_all') echo ' active'?>"><a href="/user/users_all" class="btn nav-link">Používatelia</a></li>
 				<?php }?>
 			</ul>
 			<div class="my-2 my-lg-0">
-				<a href="/_inc/user/logout.php" class="btn btn-danger">LOG OUT</a>
+				<a href="/_inc/user/logout.php" class="btn btn-danger">Odhlásiť</a>
 			</div>
 		</div>
 	</div>

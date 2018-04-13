@@ -9,10 +9,6 @@ if( !have_permission($user_profile['id'],11) ){
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-
-
-
-
 	$user         = get_user();
 	$user_profile = get_user_profile( $user->id );
 
@@ -21,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	    !isset($_POST['company_id']) || empty($_POST['company_id']) ||
 	    !isset($_POST['id'])
 	){
-		flash()->error('$_POST parameters incorrect.');
+		flash()->error('$_POST parameter nesprávny.');
 		redirect($redirect_page);
 	}
 
@@ -30,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$id = $_POST['id'];
 
 	if($id!=0 && $user_profile['company_id'] != $company_id){
-		flash()->error('Editing foreign warehouse restricted.');
+		flash()->error('Editácia cudzích skladov zakázaná.');
 		redirect($redirect_page);
 	}
 
@@ -51,11 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		]);
 	}
 	if( $upd->rowCount() > 0  ){
-		flash()->success('Warehouse created');
+		flash()->success('Sklad upravený/vytvorený');
 	}else{
-		flash()->error('Warehouse not created');
+		flash()->error('Sklad nebol upravný/vytvorený');
 	}
 }else{
-	flash()->error('no POST request');
+	flash()->error('žiaden POST request');
 }
 redirect($redirect_page);

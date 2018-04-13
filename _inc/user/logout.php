@@ -11,9 +11,9 @@ $logout = do_logout();
 
 if (!$logout){
 	// neodhlasil si sa
-	flash()->error('Log out failed');
+	flash()->error('Odhlásenie zlyhalo');
 	redirect('/');
 }else {
-	flash()->success('Successfuly logged out');
+	//flash()->success('Successfuly logged out');
 	redirect('/');
 }

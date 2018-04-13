@@ -17,7 +17,7 @@ if( $_SERVER['REQUEST_METHOD']==='POST' ){
 		// Logged in successfully, set cookie, display success message
 		do_login( $login );
 
-		flash()->success('Successfully logged in!');
+		//flash()->success('Successfully logged in!');
 		redirect('/user/homepage');
 	}
 }

@@ -39,10 +39,10 @@ if( $_SERVER['REQUEST_METHOD']==='POST' ){
 
 
 		if ( $upd->rowCount() ) {
-			flash()->success( 'User registered successfully!' );
+			flash()->success( 'Užívateľ registrovaný!' );
 			redirect( '/user/homepage' );
 		}else{
-			flash()->error( 'User profile not created successfully registered!' );
+			flash()->error( 'Profil uživateľa nebol správne vytvorený!' );
 			redirect( '/user/homepage' );
 		}
 	}

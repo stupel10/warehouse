@@ -14,7 +14,7 @@
 <?php if(!$warehouse && $warehouse_id !=0) { ?>
 <div class="row">
 	<div class="col-sm-12">
-		<h3 class="text-danger">Warehouse not found</h3>
+		<h3 class="text-danger">Sklad nenájdený</h3>
 	</div>
 </div>
 <?php }else{ ?>
@@ -22,14 +22,14 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="form-group">
-				<label for="name">NAME</label><br>
+				<label for="name">Meno</label><br>
 				<input type="text" name="name" value="<?php if(isset($warehouse) && $warehouse) echo $warehouse['name'] ?>"><br>
 			</div>
 		</div>
 		<div class="col-sm-12">
 			<input type="hidden" name="company_id" value="<?=$user_profile['company_id'];?>">
 			<input type="hidden" name="id" value="<?=$warehouse_id?>">
-			<input type="submit" value="submit" class="btn btn-danger">
+			<input type="submit" value="Uložiť" class="btn btn-danger">
 		</div>
 	</div>
 </form>

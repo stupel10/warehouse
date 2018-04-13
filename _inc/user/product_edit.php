@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	    !isset($_POST['unit_weight']) || empty($_POST['unit_weight']) ||
 	    !isset($_POST['id'])
 	){
-		flash()->error('$_POST parameters incorrect.');
+		flash()->error('$_POST parameter neplatný.');
 		redirect($redirect_page);
 	}
 
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$id = $_POST['id'];
 
 	if($id!=0 && $user_profile['company_id'] != $company_id){
-		flash()->error('Editing foreign product restricted.');
+		flash()->error('Editovanie cudzieho produktu zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -52,11 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$check = getimagesize( $_FILES["product_photo"]["tmp_name"] );
 			if ( $check !== false ) {
 				//echo "File is an image - " . $check["mime"] . ".";
-				flash()->error( "File is an image - " . $check["mime"] . "." );
+				//flash()->error( "File is an image - " . $check["mime"] . "." );
 				$uploadOk = 1;
 			} else {
 				//echo "File is not an image.";
-				flash()->error( "File is not an image." );
+				flash()->error( "Súbor nie je obrázok." );
 				$uploadOk = 0;
 			}
 		}
@@ -68,19 +68,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		// Check file size lower than 5 000 000B = 5MB
 		if ( $_FILES["product_photo"]["size"] > 5000000 ) {
 			//echo "Sorry, your file is too large.";
-			flash()->error( "Sorry, your file is too large." );
+			flash()->error( "Súbor príliž veľký." );
 			$uploadOk = 0;
 		}
 		// Allow certain file formats
 		if ( $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
 			//echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-			flash()->error( "Sorry, only JPG, JPEG, PNG & GIF files are allowed." );
+			flash()->error( "Povolené formáty: jpg,png,jpeg." );
 			$uploadOk = 0;
 		}
 		// Check if $uploadOk is set to 0 by an error
 		if ( $uploadOk == 0 ) {
 			//echo "Sorry, your file was not uploaded.";
-			flash()->error( "Sorry, your file was not uploaded." );
+			flash()->error( "Súbor nebol nahratý." );
 			// if everything is ok, try to upload file
 		} else {
 			if ( move_uploaded_file( $_FILES["product_photo"]["tmp_name"], $target_file ) ) {
@@ -92,11 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				//}
 			} else {
 				//echo "Sorry, there was an error uploading your file.";
-				flash()->error( "Sorry, there was an error uploading your file." );
+				flash()->error( "Chyba pri uploade obrázku." );
 			}
 		}
 	}else{
-		flash()-> info('Product image not filled.');
+		//flash()-> info('Nevyplnený.');
 		$target_file = '';
 	}
 	// END IMAGE
@@ -126,11 +126,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		]);
 	}
 	if( $upd->rowCount() > 0  ){
-		flash()->success('Product created/edited');
+		flash()->success('Produkt vytvorený/editovaný');
 	}else{
-		flash()->error('Product not created/edited');
+		flash()->error('Produkt nebol správne vytvorený/editovaný');
 	}
 }else{
-	flash()->error('no POST request');
+	flash()->error('žiaden POST request');
 }
 redirect($redirect_page);

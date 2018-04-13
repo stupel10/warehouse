@@ -7,25 +7,25 @@
 <?php if( !$products){ ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h3 class="text-danger">This company have no products yet</h3>
+			<h3 class="text-danger">Táto spoločnosť zatiaľ nemá žiadne produkty</h3>
 		</div>
 	</div>
 <?php }else{ ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h1>All company products</h1>
+			<h1>Všetky produkty spoločnosti</h1>
 		</div>
 		<div class="col-sm-12">
 			<table class="table table-hover">
 				<tr class="table-primary">
 					<th>ID</th>
-					<th>Product image</th>
-					<th>Product name</th>
-					<th>Tools</th>
-					<th>Quantity</th>
-					<th>Unit price</th>
-					<th>Unit weight</th>
-					<th>About</th>
+					<th>Obrázok</th>
+					<th>Meno</th>
+					<th>Možnosti</th>
+					<th>Celkový počet</th>
+					<th>Jednotková cena</th>
+					<th>Váha jednej jednotky</th>
+					<th>Vlastnosti</th>
 				</tr>
 				<?php $i = 0;foreach($products as $product){ ?>
 					<tr<?php if( ($i%2)==0 )echo ' class="table-light"'?>>
@@ -38,10 +38,10 @@
 								<a href="/user/product_detail?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Info"><i class="fas fa-info"></i></a>
 							<?php }
 							if( have_permission($user_profile['id'],7) ){?>
-								<a href="/user/product_edit?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
+								<a href="/user/product_edit?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edituj"><i class="fas fa-pencil-alt"></i></a>
 							<?php }
 							if( have_permission($user_profile['id'],8) ){?>
-								<a href="javascript:void(0);" onclick="deleteProduct(<?=$product['id']?>);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit"><i class="fas fa-times"></i></a>
+								<a href="javascript:void(0);" onclick="deleteProduct(<?=$product['id']?>);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Zmaž"><i class="fas fa-times"></i></a>
 							<?php }?>
 						</td>
 						<td><?php
@@ -67,10 +67,10 @@
 	<div class="col-sm-12">
 		<?php
 		if( have_permission($user_profile['id'],5) ){?>
-			<a href="/user/product_edit?id=0" class="btn btn-success">CREATE PRODUCT</a>
+			<a href="/user/product_edit?id=0" class="btn btn-success">Vytvoriť nový produkt</a>
 		<?php } ?>
 		<?php if($products){?>
-			<a href="/_inc/user/products_all_xls.php" class="btn btn-info">EXPORT XLS</a>
+			<a href="/_inc/user/products_all_xls.php" class="btn btn-info">Exportuj XLS</a>
 		<?php } ?>
 	</div>
 </div>

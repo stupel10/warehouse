@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
 	if( !isset($_GET['id']) || empty($_GET['id']) ){
-		flash()->error('$_GET parameters incorrect.');
+		flash()->error('$_GET parameter neplatný.');
 		redirect($redirect_page);
 	}
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$product = get_product($id);
 
 	if( $user_profile['company_id'] != $product['company_id']){
-		flash()->error('Deleting foreign products restricted.');
+		flash()->error('Mazanie cudzieho produktu zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -32,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$upd = $database->delete('products',[ 'id' => $id ]);
 
 	if( $upd->rowCount() > 0 ){
-		flash()->success('Product deleted');
+		flash()->success('Produkt odstránený');
 	}else{
-		flash()->error('Product not deleted');
+		flash()->error('Produkt nebol odstránený');
 	}
 }else{
-	flash()->error('no GET request');
+	flash()->error('žiaden GET request');
 }
 redirect($redirect_page);

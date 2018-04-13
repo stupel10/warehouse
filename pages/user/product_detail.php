@@ -17,13 +17,13 @@ if ( !isset($_GET['id']) || empty($_GET['id']) ){
 <?php if(!$product && $product_id !=0) { ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h3 class="text-danger">Product not found</h3>
+			<h3 class="text-danger">Produkt nenájdený.</h3>
 		</div>
 	</div>
 <?php }else{ ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h1>NAME:</h1>
+			<h1>M:</h1>
 			<?=$product['name'] ?>
 			<h3>ID:</h3>
 			<?=$product['id'] ?>

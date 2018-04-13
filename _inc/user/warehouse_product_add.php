@@ -10,14 +10,11 @@ if( !have_permission($user_profile['id'],13) ){
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-
-
-
 	if( !isset($_POST['warehouse_id']) || empty($_POST['warehouse_id']) ||
 	    !isset($_POST['product_id']) || empty($_POST['product_id']) ||
 	    !isset($_POST['quantity']) || empty($_POST['quantity'])
 	){
-		flash()->error('$_POST parameters incorrect.'.$_POST['warehouse_id'].$_POST['product_id'].$_POST['quantity']);
+		flash()->error('$_POST parameter nesprávny');
 		redirect($redirect_page);
 	}
 
@@ -31,12 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$user_profile = get_user_profile( get_user()->id );
 	$product = get_product($product_id);
 	if(!$product){
-		flash()->error('product not found');
+		flash()->error('Produkt nenájdený');
 		redirect($redirect_page);
 	}
 
 	if($user_profile['company_id'] != $product['company_id']){
-		flash()->error('Adding foreign product restricted.');
+		flash()->error('Pridávanie cudzích produktov zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -49,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$new_quantity = $record[0]['quantity'] + $quantity;
 		if($new_quantity <= 0){
 			$database->delete('warehouse_products',['id'=>$record[0]['id']]);
-			flash()->success('Product deleted');
+			flash()->success('Produkt zmazaný');
 			redirect($redirect_page);
 		}
 		$record = $database->update('warehouse_products',['quantity'=>$new_quantity],['warehouse_id'=>$warehouse_id,'product_id'=>$product_id]);
@@ -62,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 
 	if( $record->rowCount() > 0  ){
-		flash()->success('Product quantity edited');
+		flash()->success('Počet editovaný');
 	}else{
-		flash()->error('Product quantity not edited');
+		flash()->error('Počet nebol editovaný');
 	}
 }else{
-	flash()->error('no POST request');
+	flash()->error('žiaden POST request');
 }
 redirect($redirect_page);

@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	if( !isset($_GET['warehouse_id']) || empty($_GET['warehouse_id']) ||
 	    !isset($_GET['product_id']) || empty($_GET['product_id'])
 	){
-		flash()->error('$_GET parameters incorrect.');
+		flash()->error('$_GET parameter nesprávny.');
 		redirect($redirect_page);
 	}
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$warehouse = get_warehouse($product_id);
 
 	if( $user_profile['company_id'] != $warehouse['company_id']){
-		flash()->error('Deleting foreign warehouse product restricted.');
+		flash()->error('Mazanie cudzieho skladu zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -38,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$upd = $database->delete('warehouse_products',[ 'warehouse_id' => $warehouse_id,'product_id'=>$product_id ]);
 
 	if( $upd->rowCount() > 0 ){
-		flash()->success('Warehouse product deleted');
+		flash()->success('Zmazaný sklad.');
 	}else{
-		flash()->error('Warehouse product not deleted');
+		flash()->error('nezmazané');
 	}
 }else{
-	flash()->error('no GET request');
+	flash()->error('žiaden GT request');
 }
 redirect($redirect_page);

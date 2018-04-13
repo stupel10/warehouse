@@ -20,7 +20,7 @@
 <?php if(!$warehouse) { ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h3 class="text-danger">Warehouse not found</h3>
+			<h3 class="text-danger">Sklad nebol nájdený</h3>
 		</div>
 	</div>
 <?php }else { ?>
@@ -34,7 +34,7 @@
 	<?php if ( ! $warehouse_products ) { ?>
 		<div class="row">
 			<div class="col-sm-12">
-				<h3 class="text-danger">No products in this warehouse</h3>
+				<h3 class="text-danger">V sklade zatiaľ nie sú žiadne produkty.</h3>
 			</div>
 		</div>
 	<?php } else { ?>
@@ -43,13 +43,13 @@
 				<table class="table table-hover">
 					<tr class="table-primary">
 						<th>ID</th>
-						<th>Product image</th>
-						<th>Product name</th>
-						<th>Tools</th>
-						<th>Quantity</th>
-						<th>Unit price</th>
-						<th>Unit weight</th>
-						<th>About</th>
+						<th>Obrázok</th>
+						<th>Meno</th>
+						<th>Možnosti</th>
+						<th>Počet</th>
+						<th>Jednotková cena</th>
+						<th>Váha jednej jednotky</th>
+						<th>Vlastnosti</th>
 					</tr>
 					<?php $i=0;foreach ($warehouse_products as $warehouse_product){
 						$product = get_product($warehouse_product['product_id'])
@@ -62,7 +62,7 @@
 								<a href="/user/product_detail?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Info"><i class="fas fa-info"></i></a>
 								<!--<a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add pieces"><i class="fas fa-plus"></i></a>-->
 								<!--<a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete pieces"><i class="fas fa-minus"></i></a>-->
-								<a href="javascript:void(0);" onclick="deleteAllProductsFromWarehouse(<?=$warehouse['id']?>//,<?=$product['id']?>//);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete all"><i class="fas fa-sign-out-alt"></i></a>
+								<a href="javascript:void(0);" onclick="deleteAllProductsFromWarehouse(<?=$warehouse['id']?>//,<?=$product['id']?>//);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Zmazať všetko"><i class="fas fa-sign-out-alt"></i></a>
 							</td>
 							<td><?=$warehouse_product['quantity']?></td>
 							<td><?=$product['unit_price']?></td>
@@ -78,16 +78,16 @@
 		<div class="col-sm-12">
 			<?php
 			if( have_permission($user_profile['id'],5) ){?>
-				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">ADD PRODUCT</a>
+				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">Pridaj produkt</a>
 			<?php }
 			if( have_permission($user_profile['id'],11) ){?>
-				<a href="/user/warehouse_edit?id=<?= $warehouse['id'] ?>" class="btn btn-info">EDIT WAREHOUSE</a>
+				<a href="/user/warehouse_edit?id=<?= $warehouse['id'] ?>" class="btn btn-info">Upraviť sklad</a>
 			<?php }
 			if($warehouse_products){?>
-				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-info">EXPORT XLS</a>
+				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-info">Exportuj XLS</a>
 			<?php }
 			if( have_permission($user_profile['id'],12) ){?>
-				<a href="javascript:void(0)" onclick="deleteWarehouse(<?=$warehouse['id']?>);" class="btn btn-danger">DELETE WAREHOUSE</a>
+				<a href="javascript:void(0)" onclick="deleteWarehouse(<?=$warehouse['id']?>);" class="btn btn-danger">Vymazať sklad</a>
 			<?php } ?>
 		</div>
 	</div>

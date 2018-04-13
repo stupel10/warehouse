@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
 	if( !isset($_GET['id']) || empty($_GET['id']) ){
-		flash()->error('$_GET parameters incorrect.');
+		flash()->error('$_GET parameter nesprávny.');
 		redirect($redirect_page);
 	}
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$warehouse = get_warehouse($id);
 
 	if( $user_profile['company_id'] != $warehouse['company_id']){
-		flash()->error('Deleting foreign warehouse restricted.');
+		flash()->error('Mazanie cudzích skladov zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -34,11 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$upd = $database->delete('warehouses',[ 'id' => $id ]);
 
 	if( $upd->rowCount() > 0 ){
-		flash()->success('Warehouse deleted');
+		flash()->success('Sklad zmazaný');
 	}else{
-		flash()->error('Warehouse not deleted');
+		flash()->error('Sklad nebol zmazaný');
 	}
 }else{
-	flash()->error('no GET request');
+	flash()->error('žiaden GET request');
 }
 redirect($redirect_page);

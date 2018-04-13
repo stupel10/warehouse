@@ -2,155 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="567f5c38-aa73-4ba9-99c6-511ff0a9866f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_database_dump/warehouse_2018-04-04.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/user/users_all.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/FAQ.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/changelog.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/__construct.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/acceptpagebreak.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/addfont.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/addlink.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/addpage.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/aliasnbpages.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/cell.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/close.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/error.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/footer.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/getpageheight.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/getpagewidth.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/getstringwidth.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/getx.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/gety.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/header.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/image.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/index.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/line.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/link.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/ln.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/multicell.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/output.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/pageno.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/rect.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setauthor.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setautopagebreak.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setcompression.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setcreator.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setdisplaymode.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setdrawcolor.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setfillcolor.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setfont.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setfontsize.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setkeywords.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setleftmargin.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setlinewidth.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setlink.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setmargins.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setrightmargin.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setsubject.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/settextcolor.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/settitle.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/settopmargin.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setx.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/setxy.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/sety.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/text.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/doc/write.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/courier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/courierb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/courierbi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/courieri.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/helvetica.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/helveticab.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/helveticabi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/helveticai.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/symbol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/times.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/timesb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/timesbi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/timesi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/font/zapfdingbats.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/fpdf.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/fpdf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/install.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/license.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1250.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1251.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1252.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1253.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1254.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1255.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1257.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp1258.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/cp874.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-1.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-11.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-15.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-16.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-2.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-4.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-5.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-7.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/iso-8859-9.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/koi8-r.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/koi8-u.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/makefont.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/makefont/ttfparser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/20k_c1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/20k_c2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/calligra.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/calligra.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/calligra.z" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/countries.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/index.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/makefont.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto1.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto2.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto3.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto4.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto5.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto6.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto7.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_inc/vendor/setasign/fpdf/tutorial/tuto7.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/files/export.xlsx" afterPath="$PROJECT_DIR$/assets/files/export.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/composer.json" afterPath="$PROJECT_DIR$/_inc/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/composer.lock" afterPath="$PROJECT_DIR$/_inc/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/config.php" afterPath="$PROJECT_DIR$/_inc/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/global_functions.php" afterPath="$PROJECT_DIR$/_inc/global_functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/login.php" afterPath="$PROJECT_DIR$/_inc/user/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/logout.php" afterPath="$PROJECT_DIR$/_inc/user/logout.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/product_delete.php" afterPath="$PROJECT_DIR$/_inc/user/product_delete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/product_edit.php" afterPath="$PROJECT_DIR$/_inc/user/product_edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/products_all_xls.php" afterPath="$PROJECT_DIR$/_inc/user/products_all_xls.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/registration.php" afterPath="$PROJECT_DIR$/_inc/user/registration.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/user_create.php" afterPath="$PROJECT_DIR$/_inc/user/user_create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/warehouse_delete.php" afterPath="$PROJECT_DIR$/_inc/user/warehouse_delete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/warehouse_edit.php" afterPath="$PROJECT_DIR$/_inc/user/warehouse_edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/warehouse_product_add.php" afterPath="$PROJECT_DIR$/_inc/user/warehouse_product_add.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/warehouse_product_delete.php" afterPath="$PROJECT_DIR$/_inc/user/warehouse_product_delete.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/user/warehouse_xls.php" afterPath="$PROJECT_DIR$/_inc/user/warehouse_xls.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/variables.php" afterPath="$PROJECT_DIR$/_inc/variables.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/_inc/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/_inc/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/_inc/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_inc/vendor_edited/phpauth/phpauth/Auth.php" afterPath="$PROJECT_DIR$/_inc/vendor_edited/phpauth/phpauth/Auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_partials/header.php" afterPath="$PROJECT_DIR$/_partials/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_partials/user_header.php" afterPath="$PROJECT_DIR$/_partials/user_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/company_register.php" afterPath="$PROJECT_DIR$/pages/company_register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/homepage.php" afterPath="$PROJECT_DIR$/pages/user/homepage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/product_detail.php" afterPath="$PROJECT_DIR$/pages/user/product_detail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/product_edit.php" afterPath="$PROJECT_DIR$/pages/user/product_edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/products_all.php" afterPath="$PROJECT_DIR$/pages/user/products_all.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/user_create.php" afterPath="$PROJECT_DIR$/pages/user/user_create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/warehouse_detail.php" afterPath="$PROJECT_DIR$/pages/user/warehouse_detail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/warehouse_edit.php" afterPath="$PROJECT_DIR$/pages/user/warehouse_edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/warehouse_product_add.php" afterPath="$PROJECT_DIR$/pages/user/warehouse_product_add.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -161,7 +33,108 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="product_edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/product_edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="133" column="39" lean-forward="false" selection-start-line="133" selection-start-column="39" selection-end-line="133" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products_all_xls.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/products_all_xls.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_create.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/user_create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="warehouse_delete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_delete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="warehouse_edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="warehouse_product_add.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_product_add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="warehouse_product_delete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_product_delete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="warehouse_xls.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_xls.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global_functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_inc/global_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-399">
+              <caret line="305" column="5" lean-forward="false" selection-start-line="305" selection-start-column="5" selection-end-line="305" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -207,9 +180,6 @@
         <option value="$PROJECT_DIR$/_inc/vendor/phpauth/phpauth/Auth.php" />
         <option value="$PROJECT_DIR$/_inc/authorization.php" />
         <option value="$PROJECT_DIR$/404.php" />
-        <option value="$PROJECT_DIR$/pages/user/warehouse_edit.php" />
-        <option value="$PROJECT_DIR$/_inc/user/login.php" />
-        <option value="$PROJECT_DIR$/_inc/user/registration.php" />
         <option value="$PROJECT_DIR$/assets/js/popper.js" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
@@ -219,26 +189,30 @@
         <option value="$PROJECT_DIR$/_inc/user/products_all_xls.php" />
         <option value="$PROJECT_DIR$/_inc/user/warehouse_xls.php" />
         <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/pages/company_register.php" />
         <option value="$PROJECT_DIR$/_inc/vendor_edited/phpauth/phpauth/Auth.php" />
         <option value="$PROJECT_DIR$/pages/user/homepage.php" />
-        <option value="$PROJECT_DIR$/pages/user/product_detail.php" />
-        <option value="$PROJECT_DIR$/_inc/global_functions.php" />
-        <option value="$PROJECT_DIR$/pages/user/warehouse_product_add.php" />
-        <option value="$PROJECT_DIR$/pages/user/warehouse_detail.php" />
-        <option value="$PROJECT_DIR$/pages/user/products_all.php" />
-        <option value="$PROJECT_DIR$/pages/user/product_edit.php" />
-        <option value="$PROJECT_DIR$/_inc/user/product_delete.php" />
+        <option value="$PROJECT_DIR$/pages/user/users_all.php" />
         <option value="$PROJECT_DIR$/_partials/header.php" />
         <option value="$PROJECT_DIR$/_partials/user_header.php" />
+        <option value="$PROJECT_DIR$/pages/user/warehouse_detail.php" />
+        <option value="$PROJECT_DIR$/pages/user/product_detail.php" />
+        <option value="$PROJECT_DIR$/pages/user/products_all.php" />
+        <option value="$PROJECT_DIR$/pages/user/product_edit.php" />
         <option value="$PROJECT_DIR$/pages/user/user_create.php" />
-        <option value="$PROJECT_DIR$/pages/user/users_all.php" />
+        <option value="$PROJECT_DIR$/pages/user/warehouse_edit.php" />
+        <option value="$PROJECT_DIR$/pages/user/warehouse_product_add.php" />
+        <option value="$PROJECT_DIR$/pages/company_register.php" />
+        <option value="$PROJECT_DIR$/_inc/user/login.php" />
+        <option value="$PROJECT_DIR$/_inc/user/logout.php" />
+        <option value="$PROJECT_DIR$/_inc/user/product_delete.php" />
         <option value="$PROJECT_DIR$/_inc/user/product_edit.php" />
+        <option value="$PROJECT_DIR$/_inc/user/registration.php" />
         <option value="$PROJECT_DIR$/_inc/user/user_create.php" />
         <option value="$PROJECT_DIR$/_inc/user/warehouse_delete.php" />
         <option value="$PROJECT_DIR$/_inc/user/warehouse_edit.php" />
         <option value="$PROJECT_DIR$/_inc/user/warehouse_product_add.php" />
         <option value="$PROJECT_DIR$/_inc/user/warehouse_product_delete.php" />
+        <option value="$PROJECT_DIR$/_inc/global_functions.php" />
       </list>
     </option>
   </component>
@@ -409,17 +383,18 @@
       <updated>1522505258234</updated>
       <workItem from="1522505259781" duration="24472000" />
       <workItem from="1522759685693" duration="28888000" />
-      <workItem from="1523436925986" duration="11910000" />
+      <workItem from="1523436925986" duration="14037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65270000" />
+    <option name="totallyTimeSpent" value="67397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -427,7 +402,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28895184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3526912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -481,14 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/popper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -500,14 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="66" column="68" lean-forward="false" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,14 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_inc/vendor/phpoffice/phpspreadsheet/samples/Basic/01_Simple_download_pdf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -611,22 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/company_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/warehouse_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -682,170 +617,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/warehouse_product_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="55" column="15" lean-forward="true" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/product_detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/product_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/global_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="326" column="32" lean-forward="false" selection-start-line="326" selection-start-column="32" selection-end-line="326" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_partials/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="39" column="68" lean-forward="true" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
+        <state relative-caret-position="592">
+          <caret line="58" column="69" lean-forward="false" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_partials/user_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/user_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/users_all.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/warehouse_detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+        <state relative-caret-position="451">
+          <caret line="52" column="79" lean-forward="false" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="-218">
           <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <marker date="1523633109411" expanded="true" signature="215:247" ph="..." />
-            <marker date="1523633109411" expanded="true" signature="265:606" ph="..." />
-            <marker date="1523633109411" expanded="true" signature="319:492" ph="..." />
-            <marker date="1523633109411" expanded="true" signature="676:726" ph="..." />
-            <marker date="1523633109411" expanded="true" signature="809:952" ph="..." />
-            <marker date="1523633109411" expanded="true" signature="1011:1132" ph="..." />
-            <marker date="1523633109411" expanded="true" signature="1036:1125" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/warehouse_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="89" column="131" lean-forward="false" selection-start-line="89" selection-start-column="131" selection-end-line="89" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/product_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/products_all.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="75" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="36" selection-end-column="75" />
+        <state relative-caret-position="357">
+          <caret line="72" column="83" lean-forward="false" selection-start-line="72" selection-start-column="83" selection-end-line="72" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/product_edit.php">
+    <entry file="file://$PROJECT_DIR$/pages/user/product_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="669">
+          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/registration.php">
+    <entry file="file://$PROJECT_DIR$/pages/user/user_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/warehouse_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/warehouse_product_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/users_all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/company_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="84" lean-forward="true" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_product_delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_product_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/user_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/user/products_all_xls.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_inc/user/product_delete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="819">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/product_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="133" column="39" lean-forward="false" selection-start-line="133" selection-start-column="39" selection-end-line="133" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/products_all_xls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/user_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_product_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/user/warehouse_product_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -854,6 +813,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/global_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="305" column="5" lean-forward="false" selection-start-line="305" selection-start-column="5" selection-end-line="305" selection-end-column="5" />
           <folding />
         </state>
       </provider>

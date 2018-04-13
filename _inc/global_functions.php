@@ -116,7 +116,7 @@ function get_user_profile($user_id){
  */
 function get_warehouses($company_id){
 	if (!is_logged_in() ){
-		flash()->error('You are not logged in.');
+		flash()->error('Nie ste prihlásený.');
 		return false;
 	}
 	global $database;
@@ -166,7 +166,7 @@ function get_warehouse_products($warehouse_id){
 	$warehouse = get_warehouse($warehouse_id);
 
 	if($warehouse['company_id'] != $user_profile['company_id']) {
-		flash()->error( 'Restricted warehouse!' );
+		flash()->error( 'Prístup k tomuto skladu zakázaný!' );
 		return false;
 	}
 
@@ -205,7 +205,7 @@ function get_warehouses_product_state($product_id){
 	$product = get_product($product_id);
 
 	if($product['company_id'] != $user_profile['company_id']) {
-		flash()->error( 'Restricted product!' );
+		flash()->error( 'Prístup k produktu zakázaný!' );
 		return false;
 	}
 
@@ -251,7 +251,7 @@ function get_all_users_by_company($company_id){
 	$user_profile = get_user_profile($user->id);
 
 	if( $company_id !=  $user_profile['company_id'] ){
-		flash()->error('zakazane!');
+		flash()->error('zakázané!');
 		return false;
 	}
 
@@ -304,7 +304,6 @@ function set_permissions($user_profile_id,$role){
 			'value' => $value
 		]);
 	}
-	flash()->info("role: ".$role);
 	return true;
 }
 
