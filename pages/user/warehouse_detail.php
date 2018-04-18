@@ -34,7 +34,7 @@
 	<?php if ( ! $warehouse_products ) { ?>
 		<div class="row">
 			<div class="col-sm-12">
-				<h3 class="text-danger">V sklade zatiaľ nie sú žiadne produkty.</h3>
+				<h3 class="text-danger">V sklade zatiaľ nie sú žiadne materiály.</h3>
 			</div>
 		</div>
 	<?php } else { ?>
@@ -43,14 +43,17 @@
 				<table class="table table-hover">
 					<tr class="table-primary">
 						<th>ID</th>
+						<th>Kod</th>
+						<th>Typ</th>
 						<th>Obrázok</th>
 						<th>Meno</th>
 						<th>Možnosti</th>
 						<th>Počet</th>
 						<th>Celkový počet</th>
 						<th>Dodávateľ</th>
-						<th>Jedn. cena</th>
-						<th>Váha jednotky</th>
+						<th>Nákupná cena</th>
+						<th>Predajná cena</th>
+						<th>DPH</th>
 						<th>Vlastnosti</th>
 					</tr>
 					<?php $i=0;foreach ($warehouse_products as $warehouse_product){
@@ -58,6 +61,8 @@
 						?>
 						<tr<?php if( ($i%2)==0 )echo ' class="table-light"'?>>
 							<td><?=$product['id']?></td>
+							<td><?=$product['code']?></td>
+							<td><?=$product['type']?></td>
 							<td><img src="<? if(isset($product['photo_link'])){ echo $product['photo_link']; }else{ echo '/assets/images/product_default.png'; }?>" alt="" style="height: 30px;width:auto;"></td>
 							<td><?=$product['name']?></td>
 							<td>
@@ -81,8 +86,9 @@
 								<? $supplier = get_supplier($warehouse_product['supplier_id']);
 								echo $supplier['name'];?>
 							</td>
-							<td><?=$product['unit_price']?></td>
-							<td><?=$product['unit_weight']?></td>
+							<td><?=$product['buy_price']?></td>
+							<td><?=$product['sell_price']?></td>
+							<td><?=intval($product['sell_price'])*0.2?></td>
 							<td><?=$product['about']?></td>
 						</tr>
 					<?php $i++;}?>
@@ -94,7 +100,7 @@
 		<div class="col-sm-12">
 			<?php
 			if( have_permission($user_profile['id'],5) ){?>
-				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">Pridaj iný produkt</a>
+				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">Pridaj iný materiál</a>
 			<?php }
 			if($warehouse_products){?>
 				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-primary">Exportuj XLS</a>

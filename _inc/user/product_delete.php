@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$product = get_product($id);
 
 	if( $user_profile['company_id'] != $product['company_id']){
-		flash()->error('Mazanie cudzieho produktu zakázané.');
+		flash()->error('Mazanie cudzieho materiálu zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -34,9 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$upd = $database->delete('products',[ 'id' => $id ]);
 
 	if( $upd->rowCount() > 0 ){
-		flash()->success('Produkt odstránený');
+		flash()->success('materiál odstránený');
 	}else{
-		flash()->error('Produkt nebol odstránený');
+		flash()->error('materiál nebol odstránený');
 	}
 }else{
 	flash()->error('žiaden GET request');

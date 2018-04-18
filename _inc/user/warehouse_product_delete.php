@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
 	if( $user_profile['company_id'] != $warehouse['company_id']){
-		flash()->error('Mazanie produktov cudzieho skladu zakázané.');
+		flash()->error('Mazanie materiálov cudzieho skladu zakázané.');
 		redirect($redirect_page);
 	}
 

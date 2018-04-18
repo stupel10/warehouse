@@ -28,7 +28,7 @@
 	if ( ! $available_products ) { ?>
 		<div class="row">
 			<div class="col-sm-12">
-				<h3 class="text-danger">Táto spoločnosť zatiaľ nemá žiaden produkt.</h3>
+				<h3 class="text-danger">Táto spoločnosť zatiaľ nemá žiaden materíal.</h3>
 			</div>
 		</div>
 	<?php } else {
@@ -49,9 +49,9 @@
 		}
 
 		if($isEdit){ ?>
-			<h1>Úprava stavu produktu</h1>
+			<h1>Úprava stavu materiálu</h1>
 			<?php } else { ?>
-			<h1>Pridanie nového produktu</h1>
+			<h1>Pridanie nového materiálu</h1>
 			<?php } ?>
 		<form action="/_inc/user/warehouse_product_add.php" method="POST">
 			<div class="row">
@@ -64,10 +64,9 @@
 								<option value="<?=$one['id']?>" <?php if($isEdit && $one['id']==$supplier_id) echo 'selected'?>><?=$one['name']?></option>
 							<?php } ?>
 						</select>
-						<p class="text-danger">Toto treba este doriesit v spracovani formulara. Opytat sa robky, ci chce v sklade rovnake produkty spolu a dalsiu tabulku pre zoznam dodavatelov daneho produktu alebo rovnaky produkt od rozneho dodavatela zvlast(jednoduchsie)</p>
 					</div>
 					<div class="form-group">
-						<label for="product_id">Produkt</label><br>
+						<label for="product_id">materiál</label><br>
 						<select name="product_id" class="custom-select" <?php if($isEdit) echo 'disabled' ?>>
 							<?php foreach ( $available_products as $product ) { ?>
 								<option value="<?=$product['id']?>" <?php if($isEdit && $product['id']==$product_id) echo 'selected'?>><?=$product['name']?></option>
@@ -79,6 +78,19 @@
 						<input type="number" name="quantity" min="0"><br>
 					</div>
 				</div>
+				<?php if($isEdit){ ?>
+					<div class="col-sm-12">
+						<div class="form-group">
+							<select name="subscriber_id" id="subscriber_id" class="custom-select">
+								<?php
+									$subscribers = get_all_company_subscribers($user_profile['company_id']);
+									foreach ( $subscribers as $one ) { ?>
+										<option value="<?=$one['id']?>"><?=$one['name']?></option>
+									<?php } ?>
+							</select>
+						</div>
+					</div>
+				<?php }?>
 				<div class="col-sm-12">
 					<!--<input type="hidden" name="company_id" value="--><?//= $user_profile['company_id'];?><!--">-->
 					<input type="hidden" name="warehouse_id" value="<?= $warehouse_id ?>">

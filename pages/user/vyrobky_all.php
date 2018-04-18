@@ -1,6 +1,6 @@
 <?php
 
-	$products = get_all_company_products($user_profile['company_id']);
+$products = get_all_company_products($user_profile['company_id']);
 
 ?>
 
@@ -58,7 +58,7 @@
 								}
 							}
 							echo $global_state;
-						?></td>
+							?></td>
 						<td><?=$product['buy_price']?></td>
 						<td><?=$product['sell_price']?></td>
 						<td><?
@@ -66,7 +66,7 @@
 							?></td>
 						<td><?=$product['about']?></td>
 					</tr>
-				<?php $i++;} ?>
+					<?php $i++;} ?>
 			</table>
 		</div>
 	</div>

@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 	if($id!=0 && $user_profile['company_id'] != $company_id){
-		flash()->error('Editovanie cudzieho produktu zakázané.');
+		flash()->error('Editovanie cudzieho materiálu zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -133,9 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		]);
 	}
 	if( $upd->rowCount() > 0  ){
-		flash()->success('Produkt vytvorený/editovaný');
+		flash()->success('materiál vytvorený/editovaný');
 	}else{
-		flash()->error('Produkt nebol správne vytvorený/editovaný');
+		flash()->error('materiál nebol správne vytvorený/editovaný');
 	}
 }else{
 	flash()->error('žiaden POST request');

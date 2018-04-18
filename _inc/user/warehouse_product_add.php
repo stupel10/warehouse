@@ -30,12 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	$product = get_product($product_id);
 	if(!$product){
-		flash()->error('Produkt nenájdený');
+		flash()->error('materiál nenájdený');
 		redirect($redirect_page);
 	}
 
 	if($user_profile['company_id'] != $product['company_id']){
-		flash()->error('Pridávanie cudzích produktov zakázané.');
+		flash()->error('Pridávanie cudzích materiálov zakázané.');
 		redirect($redirect_page);
 	}
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$new_quantity = $record[0]['quantity'] + $quantity;
 		if($new_quantity <= 0){
 			$database->delete('warehouse_products',['id'=>$record[0]['id']]);
-			flash()->success('Produkt zmazaný');
+			flash()->success('materiál zmazaný');
 			redirect($redirect_page);
 		}
 		$record = $database->update('warehouse_products',['quantity'=>$new_quantity],['warehouse_id'=>$warehouse_id,'product_id'=>$product_id,'supplier_id'=>$supplier_id]);

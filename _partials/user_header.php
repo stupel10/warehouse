@@ -45,6 +45,7 @@ if ( is_logged_in() ) {
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item<?php if($page=='homepage') echo ' active'?>"><a href="/user/homepage" class="btn nav-link">Domov</a></li>
 				<li class="nav-item<?php if($page=='products_all') echo ' active'?>"><a href="/user/products_all" class="btn nav-link">Materiály</a></li>
+				<li class="nav-item<?php if($page=='vyrobky_all') echo ' active'?>"><a href="/user/vyrobky_all" class="btn nav-link">Výrobky</a></li>
 				<?php if( have_permission($user_profile['id'],15) ){?>
 				<li class="nav-item dropdown">
 					<a class="btn nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Partneri</a>
