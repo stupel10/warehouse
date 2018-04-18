@@ -43,27 +43,42 @@ $(document).ready(function(){
 			}
 			reader.readAsDataURL(this.files[0]);
 		}else{
-			alert('No image file');
+			alert('Obrázok nenájdený');
 		}
 	});
 });
 function deleteWarehouse( id ){
-	if ( confirm("Really delete this warehouse?") ){
+	if ( confirm("Vymazať tento sklad?") ){
 		window.location.href = 	'/_inc/user/warehouse_delete.php?id='+id;
 	}
 }
 function deleteProduct( id ){
-	if ( confirm("Really delete this product?") ){
+	if ( confirm("Vymazať tento produkt?") ){
 		window.location.href = 	'/_inc/user/product_delete.php?id='+id;
 	}
 }
 function select_profile_photo(){
-	if(confirm('Realy change photo?')){
+	if(confirm('Zmeniť fotku?')){
 		$('#change_profile_photo_input').click();
 	}
 }
-function deleteAllProductsFromWarehouse(warehouse_id,product_id){
-	if(confirm('Realy delete all products?')){
-		window.location.href = 	'/_inc/user/warehouse_product_delete.php?warehouse_id='+warehouse_id+'&product_id='+product_id;
+function deleteAllProductsFromWarehouse(warehouse_id,product_id,supplier_id){
+	if(confirm('Zmazať daný záznam?')){
+		window.location.href = 	'/_inc/user/warehouse_product_delete.php?warehouse_id='+warehouse_id+'&product_id='+product_id+'&supplier_id='+supplier_id;
+	}
+}
+function deleteSubscriber(subscriber_id){
+	if(confirm('Zmazať odoberatela?')){
+		window.location.href = 	'/_inc/user/subscriber_delete.php?subscriber_id='+subscriber_id;
+	}
+}
+function deleteSupplier(supplier_id){
+	if(confirm('Zmazať dodavatela?')){
+		window.location.href = 	'/_inc/user/supplier_delete.php?supplier_id='+supplier_id;
+	}
+}
+function deleteUser(user_id){
+	if(confirm('Zmazať uživateľa?')){
+		window.location.href = 	'/_inc/user/user_delete.php?user_id='+user_id;
 	}
 }

@@ -102,9 +102,17 @@ function get_user_profile($user_id){
 	$profile_id = $auth->getUserActiveProfile($user_id);
 	$user_profiles = $database->select($auth_config->table_user_profiles, "*",[ "id" => $profile_id ]);
 
-	return $user_profiles[0];
+	return $user_profiles ? $user_profiles[0] : false;
 }
 
+function get_user_profile_by_id($user_profile_id){
+	global $database;
+	global $auth_config;
+
+	$user_profile = $database->select($auth_config->table_user_profiles,'*',['id'=>$user_profile_id]);
+
+	return $user_profile ? $user_profile[0] : false;
+}
 
 /**
  *
@@ -276,16 +284,16 @@ function set_permissions($user_profile_id,$role){
 	$assigned_permissions = [];
 	switch ($role){
 		case 'admin':
-			$assigned_permissions = ['create_user','edit_user','view_user','delete_user','create_product','edit_product','view_product','delete_product','move_product','create_warehouse','edit_warehouse','view_warehouse','delete_warehouse'];
+			$assigned_permissions = ['create_user','edit_user','view_user','delete_user','create_product','edit_product','view_product','delete_product','move_product','create_warehouse','edit_warehouse','view_warehouse','delete_warehouse','create_partner','edit_partner','view_partner','delete_partner'];
 			break;
 		case 'administrative':
-			$assigned_permissions = ['create_product','edit_product','view_product','delete_product','move_product','create_warehouse','edit_warehouse','view_warehouse','delete_warehouse'];
+			$assigned_permissions = ['create_product','edit_product','view_product','delete_product','move_product','create_warehouse','edit_warehouse','view_warehouse','delete_warehouse','create_partner','edit_partner','view_partner','delete_partner'];
 			break;
 		case 'warehouseman':
-			$assigned_permissions = ['create_product','edit_product','view_product','delete_product','move_product','view_warehouse'];
+			$assigned_permissions = ['create_product','edit_product','view_product','delete_product','move_product','view_warehouse','create_partner','edit_partner','view_partner'];
 			break;
 		case 'accountant':
-			$assigned_permissions = ['view_product','view_warehouse'];
+			$assigned_permissions = ['view_product','view_warehouse','view_partner'];
 			break;
 		default:
 			flash()->error("Neboli vytvorené práva pre uživateľa.");
@@ -347,4 +355,47 @@ function get_all_user_permissions($user_profile_id){
 	$permissions = $database->select('users_permissions','*',['user_profile_id'=>$user_profile_id]);
 
 	return $permissions ? $permissions : false;
+}
+
+function get_all_company_suppliers($company_id){
+	global  $database;
+
+	$suppliers = $database->select('suppliers','*',['company_id'=>$company_id]);
+
+	return $suppliers ? $suppliers : false;
+}
+
+function get_all_company_subscribers($company_id){
+	global  $database;
+
+	$subscribers = $database->select('subscribers','*',['company_id'=>$company_id]);
+
+	return $subscribers ? $subscribers : false;
+}
+
+function get_subscriber($subscriber_id){
+	global  $database;
+
+	$subscriber = $database->select('subscribers','*',['id'=>$subscriber_id]);
+
+	return $subscriber ? $subscriber[0] : false;
+}
+
+function get_supplier($supplier_id){
+	global  $database;
+
+	$supplier = $database->select('suppliers','*',['id'=>$supplier_id]);
+
+	return $supplier ? $supplier[0] : false;
+}
+
+function get_all_same_products_in_one_warehouse($warehouse_id,$product_id){
+	global $database;
+
+	$products = $database->select('warehouse_products','*',[
+		'warehouse_id' => $warehouse_id,
+		'product_id' => $product_id
+	]);
+
+	return $products ? $products : false;
 }

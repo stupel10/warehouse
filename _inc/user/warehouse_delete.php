@@ -3,10 +3,7 @@ $redirect_page = '/user/homepage';
 
 require_once '../config.php';
 
-if( !have_permission($user_profile['id'],12) ){
-	flash()->error('Zakázané');
-	die();
-}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
@@ -14,6 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 	$user         = get_user();
 	$user_profile = get_user_profile( $user->id );
 
+
+	if( !have_permission($user_profile['id'],12) ){
+		flash()->error('Zakázané');
+		die();
+	}
 
 	if( !isset($_GET['id']) || empty($_GET['id']) ){
 		flash()->error('$_GET parameter nesprávny.');

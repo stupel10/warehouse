@@ -2,24 +2,24 @@
 $redirect_page = '/user/homepage';
 require_once '../config.php';
 
-
-if( !have_permission($user_profile['id'],7) ){
-	flash()->error('Zakázané');
-	die();
-}
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 	$user_profile = get_user_profile( get_user()->id );
 
+	if( !have_permission($user_profile['id'],7) ){
+		flash()->error('Zakázané');
+		die();
+	}
+
 
 	if( !isset($_POST['name']) || empty($_POST['name']) ||
 	    !isset($_POST['about']) || empty($_POST['about']) ||
 	    !isset($_POST['company_id']) || empty($_POST['company_id']) ||
-	    !isset($_POST['unit_price']) || empty($_POST['unit_price']) ||
-	    !isset($_POST['unit_weight']) || empty($_POST['unit_weight']) ||
+	    !isset($_POST['buy_price']) || empty($_POST['buy_price']) ||
+	    !isset($_POST['sell_price']) || empty($_POST['sell_price']) ||
+	    !isset($_POST['code']) || empty($_POST['code']) ||
+	    !isset($_POST['type']) || empty($_POST['type']) ||
 	    !isset($_POST['id'])
 	){
 		flash()->error('$_POST parameter neplatný.');
@@ -28,10 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	$name = $_POST['name'];
 	$about = $_POST['about'];
-	$unit_price = $_POST['unit_price'];
-	$unit_weight = $_POST['unit_weight'];
+	$code = $_POST['code'];
+	$type = $_POST['type'];
+	$buy_price = $_POST['buy_price'];
+	$sell_price = $_POST['sell_price'];
 	$company_id = $_POST['company_id'];
 	$id = $_POST['id'];
+
 
 	if($id!=0 && $user_profile['company_id'] != $company_id){
 		flash()->error('Editovanie cudzieho produktu zakázané.');
@@ -108,19 +111,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$upd = $database->insert('products',[
 			'name' => $name,
 			'about' => $about,
-			'unit_price' => $unit_price,
-			'unit_weight' => $unit_weight,
+			'buy_price' => $buy_price,
+			'sell_price' => $sell_price,
 			'company_id' => $company_id,
-			'photo_link' => $target_file
+			'photo_link' => $target_file,
+			'code' => $code,
+			'type' => $type
 		]);
 	}else{
 		$upd = $database->update( 'products', [
 			'name' => $name,
 			'about' => $about,
-			'unit_price' => $unit_price,
-			'unit_weight' => $unit_weight,
+			'buy_price' => $buy_price,
+			'sell_price' => $sell_price,
 			'company_id' => $company_id,
-			'photo_link' => $target_file
+			'photo_link' => $target_file,
+			'code' => $code,
+			'type' => $type
 		],[
 			'id' => $id
 		]);

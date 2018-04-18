@@ -47,8 +47,10 @@
 						<th>Meno</th>
 						<th>Možnosti</th>
 						<th>Počet</th>
-						<th>Jednotková cena</th>
-						<th>Váha jednej jednotky</th>
+						<th>Celkový počet</th>
+						<th>Dodávateľ</th>
+						<th>Jedn. cena</th>
+						<th>Váha jednotky</th>
 						<th>Vlastnosti</th>
 					</tr>
 					<?php $i=0;foreach ($warehouse_products as $warehouse_product){
@@ -60,11 +62,25 @@
 							<td><?=$product['name']?></td>
 							<td>
 								<a href="/user/product_detail?id=<?=$product['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Info"><i class="fas fa-info"></i></a>
-								<!--<a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add pieces"><i class="fas fa-plus"></i></a>-->
-								<!--<a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete pieces"><i class="fas fa-minus"></i></a>-->
-								<a href="javascript:void(0);" onclick="deleteAllProductsFromWarehouse(<?=$warehouse['id']?>//,<?=$product['id']?>//);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Zmazať všetko"><i class="fas fa-sign-out-alt"></i></a>
+								<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>&product_id=<?=$product['id']?>&supplier_id=<?=$warehouse_product['supplier_id']?>&direction=in" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add pieces"><i class="fas fa-plus"></i></a>
+								<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>&product_id=<?=$product['id']?>&supplier_id=<?=$warehouse_product['supplier_id']?>&direction=out" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete pieces"><i class="fas fa-minus"></i></a>
+								<a href="javascript:void(0);" onclick="deleteAllProductsFromWarehouse(<?=$warehouse['id']?>,<?=$product['id']?>,<?=$warehouse_product['supplier_id']?>);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Zmazať všetko"><i class="fas fa-sign-out-alt"></i></a>
 							</td>
 							<td><?=$warehouse_product['quantity']?></td>
+							<td>
+								<?php
+								$same_products = get_all_same_products_in_one_warehouse($warehouse_product['warehouse_id'],$product['id']);
+								$counter = 0;
+								foreach ($same_products as $one){
+									$counter += $one['quantity'];
+								}
+								echo $counter;
+								?>
+							</td>
+							<td>
+								<? $supplier = get_supplier($warehouse_product['supplier_id']);
+								echo $supplier['name'];?>
+							</td>
 							<td><?=$product['unit_price']?></td>
 							<td><?=$product['unit_weight']?></td>
 							<td><?=$product['about']?></td>
@@ -78,13 +94,13 @@
 		<div class="col-sm-12">
 			<?php
 			if( have_permission($user_profile['id'],5) ){?>
-				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">Pridaj produkt</a>
+				<a href="/user/warehouse_product_add?id=<?= $warehouse['id'] ?>" class="btn btn-success">Pridaj iný produkt</a>
+			<?php }
+			if($warehouse_products){?>
+				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-primary">Exportuj XLS</a>
 			<?php }
 			if( have_permission($user_profile['id'],11) ){?>
 				<a href="/user/warehouse_edit?id=<?= $warehouse['id'] ?>" class="btn btn-info">Upraviť sklad</a>
-			<?php }
-			if($warehouse_products){?>
-				<a href="/_inc/user/warehouse_xls.php?id=<?= $warehouse['id']?>" class="btn btn-info">Exportuj XLS</a>
 			<?php }
 			if( have_permission($user_profile['id'],12) ){?>
 				<a href="javascript:void(0)" onclick="deleteWarehouse(<?=$warehouse['id']?>);" class="btn btn-danger">Vymazať sklad</a>

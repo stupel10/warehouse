@@ -2,6 +2,9 @@
 
 require_once '../config.php';
 
+
+$user = get_user();
+$user_profile = get_user_profile($user->id);
 if( !have_permission($user_profile['id'],1) ){
 	flash()->error('Zakázané');
 	die();
@@ -18,19 +21,27 @@ if( $_SERVER['REQUEST_METHOD']==='POST' ){
 
 	if( $register['error'] ){
 		flash()->error($register['message']);
-		redirect('/user/user_create');
+		redirect('/user/user_edit');
 	}else {
 		// create user profile
-		$name    = $_POST['name'];
-		$surname = $_POST['surname'];
-		$role = $_POST['role'];
+		if(isset($_POST['name']) && !empty($_POST['name']) ){$name=$_POST['name'];}else{$name='';}
+		if(isset($_POST['surname']) && !empty($_POST['surname']) ){$surname=$_POST['surname'];}else{$surname='';}
+		if(isset($_POST['role']) && !empty($_POST['role']) ){$role=$_POST['role'];}else{$role='';}
+		if(isset($_POST['phone']) && !empty($_POST['phone']) ){$phone=$_POST['phone'];}else{$phone='';}
+		if(isset($_POST['email']) && !empty($_POST['email']) ){$email=$_POST['email'];}else{$email='';}
+		if(isset($_POST['address']) && !empty($_POST['address']) ){$address=$_POST['address'];}else{$address='';}
+
 
 		$admin_profile = get_user_profile(get_user()->id);
 		global $database;
 		$upd = $database->update( 'user_profiles', [
 			'name'    => $name,
 			'surname' => $surname,
-			'company_id' => $admin_profile['company_id']
+			'company_id' => $admin_profile['company_id'],
+			'role' => $role,
+			'phone' => $phone,
+			'email' => $email,
+			'address' => $address
 		], [ 'id' => $register['profile_id'] ] );
 
 		// permissions

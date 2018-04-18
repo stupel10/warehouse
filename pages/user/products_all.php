@@ -19,17 +19,22 @@
 			<table class="table table-hover">
 				<tr class="table-primary">
 					<th>ID</th>
+					<th>Kod</th>
+					<th>Typ</th>
 					<th>Obrázok</th>
 					<th>Meno</th>
 					<th>Možnosti</th>
 					<th>Celkový počet</th>
-					<th>Jednotková cena</th>
-					<th>Váha jednej jednotky</th>
+					<th>Nakupna cena</th>
+					<th>Predajna cena</th>
+					<th>DPH</th>
 					<th>Vlastnosti</th>
 				</tr>
 				<?php $i = 0;foreach($products as $product){ ?>
 					<tr<?php if( ($i%2)==0 )echo ' class="table-light"'?>>
 						<td><?=$product['id']?></td>
+						<td><?=$product['code']?></td>
+						<td><?=$product['type']?></td>
 						<td><img src="<? if(isset($product['photo_link'])){ echo $product['photo_link']; }else{ echo '/assets/images/product_default.png'; }?>" alt="" style="height: 30px;width:auto;"></td>
 						<td><?=$product['name']?></td>
 						<td>
@@ -54,8 +59,11 @@
 							}
 							echo $global_state;
 						?></td>
-						<td><?=$product['unit_price']?></td>
-						<td><?=$product['unit_weight']?></td>
+						<td><?=$product['buy_price']?></td>
+						<td><?=$product['sell_price']?></td>
+						<td><?
+							echo intval($product['sell_price'])*0.2;
+							?></td>
 						<td><?=$product['about']?></td>
 					</tr>
 				<?php $i++;} ?>

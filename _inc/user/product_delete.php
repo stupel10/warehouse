@@ -2,15 +2,17 @@
 $redirect_page = '/user/products_all';
 require_once '../config.php';
 
-if( !have_permission($user_profile['id'],8) ){
-	flash()->error('Zakázané');
-	die();
-}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 	$user         = get_user();
 	$user_profile = get_user_profile( $user->id );
+
+	if( !have_permission($user_profile['id'],8) ){
+		flash()->error('Zakázané');
+		die();
+	}
 
 
 	if( !isset($_GET['id']) || empty($_GET['id']) ){

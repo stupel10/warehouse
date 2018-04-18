@@ -23,7 +23,15 @@
 		<div class="col-sm-12">
 			<div class="form-group">
 				<label for="name">Meno</label><br>
-				<input type="text" name="name" value="<?php if(isset($warehouse) && $warehouse) echo $warehouse['name'] ?>"><br>
+				<input type="text" name="name" value="<?php if(isset($warehouse) && $warehouse) echo $warehouse['name'] ?>" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="info">Info</label>
+				<textarea name="info" id="info" cols="30" rows="5" class="form-control"><?php if(isset($warehouse) && $warehouse) echo $warehouse['info'] ?></textarea>
+			</div>
+			<div class="form-group">
+				<label for="info">Adresa</label>
+				<textarea name="address" id="address" cols="30" rows="5" class="form-control"><?php if(isset($warehouse) && $warehouse) echo $warehouse['address'] ?></textarea>
 			</div>
 		</div>
 		<div class="col-sm-12">

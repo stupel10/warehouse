@@ -24,6 +24,10 @@ if( !have_permission($user_profile['id'],4) ){
 					<th>ID</th>
 					<th>Meno</th>
 					<th>Priezvisko</th>
+					<th>Možnosti</th>
+					<th>Telefónne Číslo</th>
+					<th>Email</th>
+					<th>Adresa</th>
 					<th>Dátum a čas registrácie</th>
 					<?php
 					$permissions = get_all_permissions();
@@ -42,6 +46,17 @@ if( !have_permission($user_profile['id'],4) ){
 				<td><?=$user['id']?></td>
 				<td><?=$user['name']?></td>
 				<td><?=$user['surname']?></td>
+				<td>
+					<?php if( have_permission($user_profile['id'],2) ){ ?>
+					<a href="/user/user_edit?id=<?=$user['id']?>" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Upraviť"><i class="fas fa-pencil-alt"></i></a>
+					<?php } ?>
+					<?php if( have_permission($user_profile['id'],3) && $user_profile['id'] != $user['id']){ ?>
+					<a href="javascript:void(0);" onclick="deleteUser(<?=$user['id']?>);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Zmazať"><i class="fas fa-trash-alt"></i></a>
+					<?php } ?>
+				</td>
+				<td><?=$user['phone']?></td>
+				<td><?=$user['email']?></td>
+				<td><?=$user['address']?></td>
 				<td><?=$user['date_registered']?></td>
 				<?php
 				$all_permissions = get_all_permissions();
@@ -71,7 +86,7 @@ if( !have_permission($user_profile['id'],4) ){
 <div class="row">
 	<div class="col-sm-12">
 		<?php if( have_permission($user_profile['id'],1) ){?>
-			<a href="/user/user_create" class="btn btn-success">Vytvoriť používateľa</a>
+			<a href="/user/user_edit" class="btn btn-success">Vytvoriť používateľa</a>
 		<?php }?>
 	</div>
 </div>

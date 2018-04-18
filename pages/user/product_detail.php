@@ -21,38 +21,52 @@ if ( !isset($_GET['id']) || empty($_GET['id']) ){
 		</div>
 	</div>
 <?php }else{ ?>
+	<style>
+		p.big-text {  font-size: 30px;  }
+		p.medium-text {  font-size: 20px;  }
+	</style>
 	<div class="row">
 		<div class="col-sm-12">
-			<h1>M:</h1>
-			<?=$product['name'] ?>
-			<h3>ID:</h3>
-			<?=$product['id'] ?>
+			<h1><?=$product['name'] ?></h1>
+			<hr>
+		</div>
+		<div class="col-sm-6">
+			<h3>ID</h3>
+			<p class="big-text"><?=$product['id'] ?></p>
 
-			<h3>UNIT PRICE</h3>
-			<?=$product['unit_price']?> €
+			<h3>Kod</h3>
+			<p class="big-text"><?=$product['code'] ?></p>
 
-			<h3>UNIT WEIGHT</h3>
-			<?=$product['unit_weight']?> kg
+			<h3>Typ</h3>
+			<p class="big-text"><?=$product['type'] ?></p>
 
-			<h3>PROFILE PHOTO</h3>
-			<img id="profile_photo" src="<? if( isset($product['photo_link'])){ echo $product['photo_link']; }else{ echo '/assets/images/product_default.png'; }?>" alt="Profile photo" style="height:200px;width:auto;">
+			<h3>Nákupná cena</h3>
+			<p class="big-text"><?=$product['buy_price']?> €</p>
 
+			<h3>Predajá cena</h3>
+			<p class="big-text"><?=$product['sell_price']?> €</p>
+		</div>
+		<div class="col-sm-6">
+			<img id="profile_photo" src="<? if( !empty($product['photo_link']) ){ echo $product['photo_link']; }else{ echo '/assets/images/product_default.png'; }?>" alt="Profile photo" style="height:200px;width:auto;">
+		</div>
+		<div class="col-sm-12">
 			<h3>ABOUT:</h3>
-			<?=$product['about']?>
+			<p class="medium-text"><?=$product['about']?></p>
 		</div>
 	</div>
 	<?php
 		$warehouse_state = get_warehouses_product_state($product['id']);
 		if($warehouse_state){
 	?>
-	<div class="row">
-		<div class="col-sm-6">
-			<h3>WAREHOUSE STATE</h3>
+			<hr>
+	<div class="row" style="margin-top: 50px;">
+		<div class="col-lg-6">
+			<h2>Stav v skladoch</h2>
 			<table class="table table-hover">
 				<tr class="table-primary">
-					<th>Warehouse ID</th>
-					<th>Warehouse Name</th>
-					<th>Quantity</th>
+					<th>ID skladu</th>
+					<th>Meno skladu</th>
+					<th>Počet</th>
 				</tr>
 				<?php
 					$i = 0;

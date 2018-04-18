@@ -24,8 +24,8 @@
 				<div class="card border-primary mb-3">
 					<div class="card-header"><h3><?= $warehouse['name']?><i class="fas fa-arrow-right"></i></h3></div>
 					<div class="card-body">
-						<!--<h4 class="card-title">Info</h4>-->
-						<!--<p class="card-text">Nejake info o danom sklade, mozno progressbar.</p>-->
+						<p class="card-text"><?=$warehouse['info']?></p>
+						<p class="card-text"><?=$warehouse['address']?></p>
 					</div>
 				</div>
 			</a>

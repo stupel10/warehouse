@@ -2,6 +2,7 @@
 $redirect_page = '/user/homepage';
 require_once '../config.php';
 
+$user_profile = get_user_profile( get_user()->id );
 if( !have_permission($user_profile['id'],13) ){
 	flash()->error('Zakázané');
 	die();
@@ -12,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	if( !isset($_POST['warehouse_id']) || empty($_POST['warehouse_id']) ||
 	    !isset($_POST['product_id']) || empty($_POST['product_id']) ||
-	    !isset($_POST['quantity']) || empty($_POST['quantity'])
+	    !isset($_POST['quantity']) || empty($_POST['quantity']) ||
+	    !isset($_POST['supplier_id']) || empty($_POST['supplier_id'])
 	){
 		flash()->error('$_POST parameter nesprávny');
 		redirect($redirect_page);
@@ -22,10 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$warehouse_id = $_POST['warehouse_id'];
 	$product_id = $_POST['product_id'];
 	$quantity = $_POST['quantity'];
+	$supplier_id = $_POST['supplier_id'];
 
 	$redirect_page = '/user/warehouse_detail?id='.$warehouse_id;
 
-	$user_profile = get_user_profile( get_user()->id );
 	$product = get_product($product_id);
 	if(!$product){
 		flash()->error('Produkt nenájdený');
@@ -40,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	global $database;
 	global $auth_config;
 
-	$record = $database->select('warehouse_products','*',['warehouse_id'=>$warehouse_id,'product_id'=>$product_id]);
+	$record = $database->select('warehouse_products','*',['warehouse_id'=>$warehouse_id,'product_id'=>$product_id,'supplier_id'=>$supplier_id]);
 	if($record){
 		// update record with new quantity
 		$new_quantity = $record[0]['quantity'] + $quantity;
@@ -49,13 +51,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			flash()->success('Produkt zmazaný');
 			redirect($redirect_page);
 		}
-		$record = $database->update('warehouse_products',['quantity'=>$new_quantity],['warehouse_id'=>$warehouse_id,'product_id'=>$product_id]);
+		$record = $database->update('warehouse_products',['quantity'=>$new_quantity],['warehouse_id'=>$warehouse_id,'product_id'=>$product_id,'supplier_id'=>$supplier_id]);
 	}else{
 		// create new record
 		$record = $database->insert('warehouse_products',[
 			'quantity'=>$quantity,
 			'warehouse_id'=>$warehouse_id,
-			'product_id'=> $product_id ]);
+			'product_id'=> $product_id,
+			'supplier_id'=>$supplier_id
+		]);
 	}
 
 	if( $record->rowCount() > 0  ){
